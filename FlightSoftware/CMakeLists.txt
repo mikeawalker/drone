@@ -1,0 +1,67 @@
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+#windows
+#SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "G:/CodeLibs/Boost")
+project(ethernet_drone)
+#windows
+#set(Boost_USE_STATIC_LIBS ON) 
+set(Boost_USE_MULTITHREADED ON)
+find_package(Boost REQUIRED COMPONENTS system filesystem thread date_time chrono regex)
+
+set(EIGEN /usr/include/eigen3)
+#set(EIGEN G:/CodeLibs/Eigen)
+
+set(CMAKE_CXX_FLAGS "-O2")        ## Optimize, C++11
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++0x") # C++11
+
+ message(STATUS "inside BoostConfig.cmake:  BOOST_FOUND is ${BOOST_FOUND}")
+ message(STATUS "inside BoostConfig.cmake:  Boost_FOUND is ${Boost_FOUND}")
+ message(STATUS "inside BoostConfig.cmake:  Boost_INCLUDE_DIR is ${Boost_INCLUDE_DIR}")
+ message(STATUS "inside BoostConfig.cmake:  Boost_LIBRARY_DIRS is ${Boost_LIBRARY_DIRS}")
+ message(STATUS "inside BoostConfig.cmake:  Boost_LIBRARIES is ${Boost_LIBRARIES}")
+ message(STATUS "inside BoostConfig.cmake:  Eigen isis ${EIGEN}")
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(${EIGEN})
+INCLUDE_DIRECTORIES(Autopilot) 
+INCLUDE_DIRECTORIES(Guidance) 
+INCLUDE_DIRECTORIES(Navigator) 
+INCLUDE_DIRECTORIES(FlightManager)
+INCLUDE_DIRECTORIES(Device)
+INCLUDE_DIRECTORIES(Device/I2C_Device)
+INCLUDE_DIRECTORIES(Device/I2C_Device/ADXL345)
+INCLUDE_DIRECTORIES(Device/I2C_Device/HMC5883L)
+INCLUDE_DIRECTORIES(Device/I2C_Device/ITG3200)
+INCLUDE_DIRECTORIES(Device/I2C_Device/MAG3110)
+INCLUDE_DIRECTORIES(Device/I2C_Device/PCA9685)
+INCLUDE_DIRECTORIES(Device/FakeInterface)
+INCLUDE_DIRECTORIES(Device/Interrupts)
+INCLUDE_DIRECTORIES(Device/Serial)
+INCLUDE_DIRECTORIES(Device/Serial/LS20031)
+INCLUDE_DIRECTORIES(Device/Serial/Radio3dr)
+INCLUDE_DIRECTORIES(Device/GPIO)
+INCLUDE_DIRECTORIES(Timers)
+INCLUDE_DIRECTORIES(HiveMind) 
+INCLUDE_DIRECTORIES(Messages) 
+INCLUDE_DIRECTORIES(Tools) 
+INCLUDE_DIRECTORIES(Include)
+INCLUDE_DIRECTORIES(Build)
+INCLUDE_DIRECTORIES(HiveMind/Block)
+INCLUDE_DIRECTORIES(HiveMind/Message)
+INCLUDE_DIRECTORIES(HiveMind/Publisher)
+
+
+add_subdirectory(Autopilot) 
+add_subdirectory(Guidance) 
+add_subdirectory(Navigator)
+add_subdirectory(FlightManager) 
+add_subdirectory(Device)
+add_subdirectory(Timers) 
+add_subdirectory(HiveMind) 
+add_subdirectory(Messages) 
+add_subdirectory(Tools) 
+add_subdirectory(Include)
+add_subdirectory(Build)
+
+
+
+add_executable( EthernetDrone ${SOURCE} ${HEADERS}  ${MAINCPP} )
+target_link_libraries( EthernetDrone rt ${Boost_LIBRARIES})

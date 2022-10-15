@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Messages">
+      <UniqueIdentifier>{8b2e5221-5a59-45f4-91e3-19b9dadedb11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Device\UDP_Device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\CovMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\EkfStateMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\GpsPvtMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\GuideMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\ImuMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\MagMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\StabilityMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\Timer_5HzMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\Timer_30HzMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\Timer_1000HzMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Messages\TimerSetupMsg.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\HiveMind\Message\Message.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Device\UDP_Device.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\CovMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\DroneMsgTypes.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\EkfStateMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\GpsPvtMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\GuideMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\ImuMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\MagMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\StabilityMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\Timer_5HzMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\Timer_30HzMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\Timer_1000HzMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Messages\TimerSetupMsg.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HiveMind\Message\Message.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HiveMind\Message\MessageTypes.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Include\Structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Messages\Messages.csv">
+      <Filter>Messages</Filter>
+    </None>
+    <None Include="..\..\..\Messages\MsgMaker.py">
+      <Filter>Messages</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+
+set(SOURCE 
+	${SOURCE}
+	${CMAKE_CURRENT_SOURCE_DIR}/Interrupt.cpp
+#	${CMAKE_CURRENT_SOURCE_DIR}/Interrupt_Interface.cpp
+	PARENT_SCOPE)
+
+
+set(HEADERS
+	${HEADERS}
+	${CMAKE_CURRENT_SOURCE_DIR}/Interrupt.h
+#	${CMAKE_CURRENT_SOURCE_DIR}/Interrupt_Interface.h
+	PARENT_SCOPE)

@@ -1,0 +1,5 @@
+
+set(SOURCE 
+	${SOURCE}
+	${CMAKE_CURRENT_SOURCE_DIR}/DroneFull/main.cpp
+	PARENT_SCOPE)

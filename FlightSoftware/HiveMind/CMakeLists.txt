@@ -1,0 +1,16 @@
+
+set(SOURCE 
+	${SOURCE}
+	${CMAKE_CURRENT_SOURCE_DIR}/Block/Block.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Message/Message.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Publisher/Hive.cpp
+	PARENT_SCOPE)
+
+
+set(HEADERS
+	${HEADERS}
+	${CMAKE_CURRENT_SOURCE_DIR}/Block/Block.h
+	${CMAKE_CURRENT_SOURCE_DIR}/Message/Message.h
+	${CMAKE_CURRENT_SOURCE_DIR}/Message/MessageTypes.h
+	${CMAKE_CURRENT_SOURCE_DIR}/Publisher/Hive.h
+	PARENT_SCOPE)

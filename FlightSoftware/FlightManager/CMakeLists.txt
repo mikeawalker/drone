@@ -1,0 +1,13 @@
+
+set(SOURCE 
+	${SOURCE}
+	${CMAKE_CURRENT_SOURCE_DIR}/FlightManager.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/FlightManagerBlock.cpp
+	PARENT_SCOPE)
+
+
+set(HEADERS
+	${HEADERS}
+	${CMAKE_CURRENT_SOURCE_DIR}/FlightManager.h
+	${CMAKE_CURRENT_SOURCE_DIR}/FlightManagerBlock.h
+	PARENT_SCOPE)
